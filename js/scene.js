@@ -9,7 +9,7 @@ document.body.appendChild(renderer.domElement);
 var loader = new GLTFLoader();
 
 var obj;
-loader.load('room.gltf', function(gltf) {
+loader.load('assets/room.gltf', function(gltf) {
 	obj = gltf.scene;
 	scene.add(gltf.scene);
 });
