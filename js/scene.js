@@ -1,4 +1,4 @@
-import {GLTFLoader} from "./GLTFLoader.js";
+import {GLTFLoader} from "https://unpkg.com/three@0.126.1/examples/jsm/loaders/GLTFLoader.js";
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 1000);
