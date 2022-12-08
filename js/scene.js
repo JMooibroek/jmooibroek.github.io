@@ -1,4 +1,4 @@
-import {GLTFLoader} from "https://unpkg.com/three@0.126.1/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "./GLTFLoader.js";
 
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 1000);
@@ -20,4 +20,13 @@ function animate(){
 	requestAnimationFrame(animate);
 	renderer.render(scene, camera);
 }
+// Jank - event proccess delay (throttle? lodash?)
+window.addEventListener('resize', () => {
+	const width = window.innerWidth;
+	const height = window.innerHeight;
+	camera.aspect = width / height;
+	camera.updateProjectionMatrix();
+	renderer.setSize(width, height);
+	setCanvasDimensions(renderer.domElement, width, height);
+});
 animate();
