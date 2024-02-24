@@ -4,13 +4,6 @@ body {
     caret-color: #ED8421;
     font-family: monospace;
     margin: 0;
-<<<<<<< Updated upstream
- }
-canvas { 
-    /* width: 100%;
-    height: 100%  */
-    display: block;
-=======
     padding: 0;
     text-shadow: 0 0 10px #ed842138;
 }
@@ -36,5 +29,4 @@ input {
     font-family: monospace;
     color: #ED8421;
     text-shadow: 0 0 10px #ed842138;
->>>>>>> Stashed changes
 }
