@@ -1,4 +1,5 @@
 # My portfolio website
 
 ## TODO
-* background of an abandoned workspace with crt monitor/computer
+* background of a cyberpunk hacker bunker
+* visitor@jamaronet:~(/folder)$
