@@ -1,32 +1,44 @@
 body {
-    background-color: black;
-    color: #ED8421;
-    caret-color: #ED8421;
-    font-family: monospace;
-    margin: 0;
-    padding: 0;
-    text-shadow: 0 0 10px #ed842138;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  background-image: url('crt-monitor-background.avif');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
+
 
 #terminal {
-    width: auto;
-    height: calc(100% - 40px);
-    overflow: auto;
-    padding: 10px;
+  width: 13.8%;
+  height: 23%;
+  position: fixed;
+  top: 17vw;
+  left: 24.5vw;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #00FF00;
+  font-family: monospace;
+  font-size: 0.5vw;
+  z-index: 1;
+  text-shadow: 0 0 5px #00ff009d;
+  filter:blur(0.6px);
+  transform: perspective(670px) rotateX(0deg) rotateY(10deg) rotateZ(-1.5deg);
 }
 
-#input-container {
-    width: auto;
-    padding: 10px;
-    box-sizing: border-box;
+p {
+  white-space: pre-wrap;
+  margin: 0;
 }
 
 input {
-    width: auto;
-    background-color: transparent;
-    border: none;
-    outline: none;
-    font-family: monospace;
-    color: #ED8421;
-    text-shadow: 0 0 10px #ed842138;
+  background-color: transparent;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  color: #00FF00;
+  font-family: monospace;
+  caret-color: #00FF00;
+  filter:blur(0.6px);
 }

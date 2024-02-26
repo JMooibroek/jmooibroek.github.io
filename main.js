@@ -1,5 +1,7 @@
-const terminal = document.getElementById('terminal');
+const date = new Date()
+const terminal = document.getElementById('terminal-entries');
 const input = document.getElementById('input');
+var folder = ""
 
 function addLine(text) {
   const line = document.createElement('p');
@@ -9,7 +11,9 @@ function addLine(text) {
 }
 
 document.addEventListener('keydown', function(event) {
-	input.focus();
+  if(event.key.length === 1) {
+	  input.focus();
+  }
 });
 
 input.addEventListener('keydown', function(event) {
@@ -17,23 +21,26 @@ input.addEventListener('keydown', function(event) {
     const command = input.value;
     input.value = '';
 
-    addLine('> ' + command);
-
-    // Process the user's command here
-    // You can add your logic to handle different commands
+    addLine('visitor@jamaronet:~'+folder+'$' + command);
+    if(command == 'cls' || command == 'clear') {
+      while (terminal.firstChild) terminal.removeChild(terminal.firstChild);
+    }
 
     event.preventDefault();
-
-    // Scroll to the last line of text
     terminal.scrollTop = terminal.scrollHeight;
-
-    // Move the focus back to the input
     input.focus();
   }
 });
 
+
 // Example usage
-addLine('Welcome to the terminal!');
+addLine("Welcome to:")
+addLine("     _                      ___  ___ ");
+addLine("  _ | |__ _ _ __  __ _ _ _ / _ \\/ __|");
+addLine(" | || / _` | '  \\/ _` | '_| (_) \\__ \\");
+addLine("  \\__/\\__,_|_|_|_\\__,_|_|  \\___/|___/");
+addLine("                         [Version 1.0]");
+addLine("Today is: " + date.toDateString())
 addLine('Type a command and press Enter.');
 
 // Set the initial focus to the input
