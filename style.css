@@ -27,8 +27,7 @@ body::before {
   font-family: monospace;
   overflow-y: scroll;
   z-index: 1;
-  text-shadow: 0 0 5px #00ff009d;
-  filter:blur(0.8px);
+  /* filter: blur(0.8px); */
   transform: perspective(1000px) rotateX(-2deg) rotateY(10deg) rotateZ(-1.4deg);
 }
 

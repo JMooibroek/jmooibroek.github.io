@@ -9,21 +9,29 @@ function resizeTerminal() {
     terminalFrame.style.left = '24.2vw';
     terminalFrame.style.width = '17.4vw';
     terminalFrame.style.height = '10.8vw';
-    terminalFrame.style.fontSize =  '0.5vw';
-    input.style.fontSize = '0.5vw';
+    terminalFrame.style.fontSize =  '0.6vw';
+    input.style.fontSize = '0.6vw';
+    terminalFrame.style.filter = 'blur(0.03vw)';
+    terminalFrame.style.textShadow = '0 0 0.4vw #00ff009d';
   } else {
     terminalFrame.style.top = '36vh';
     terminalFrame.style.left = '51.56vh';
     terminalFrame.style.width = '37vh';
     terminalFrame.style.height = '23vh';
-    terminalFrame.style.fontSize =  '1vh';
-    input.style.fontSize = '1vh';
+    terminalFrame.style.fontSize =  '1.3vh';
+    input.style.fontSize = '1.3vh';
+    terminalFrame.style.filter = 'blur(0.06vh)';
+    terminalFrame.style.textShadow = '0 0 0.8vh #00ff009d';
   }
 }
 
 window.addEventListener('resize', function() {
   resizeTerminal();
 });
+
+function showAbout() {
+
+}
 
 function addLine(text) {
   const line = document.createElement('p');
@@ -48,6 +56,9 @@ input.addEventListener('keydown', function (event) {
       case 'clear':
         while (terminal.firstChild) terminal.removeChild(terminal.firstChild);
         break;
+      case 'about':
+        showAbout();
+        break;
       case 'shutdown':
         window.close();
         break;
@@ -56,13 +67,14 @@ input.addEventListener('keydown', function (event) {
         break;
       case 'help':
         addLine('Available commands:');
-        addLine('  clear        Clear the terminal');
+        addLine('  about        Information about Jamaro');
+        addLine('  cls          Clear the terminal');
         addLine('  shutdown     Close the page');
         addLine('  reboot       Reload the page');
         addLine('  help         Show available commands');
         break;
       default:
-        addLine('Command not found: ' + cmd);
+        addLine('Command not found: ' + command);
         break;
     }
 
