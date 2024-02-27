@@ -1,5 +1,6 @@
 # My portfolio website
 
 ## TODO
-* background of a cyberpunk hacker bunker
-* visitor@jamaronet:~(/folder)$
+* folders/files fixen
+* reboot/shutdown
+* ratio in js uitbreiden

@@ -2,13 +2,27 @@
 <html>
 <head>
   <style>
+    html {
+      background-color: black;
+    }
     body {
       margin: 0;
       padding: 0;
+      /* position: relative; */
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-image: url('crt-monitor-background.avif');
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
+      z-index: -1;
     }
 
     #topLeftDiv {

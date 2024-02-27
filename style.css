@@ -1,30 +1,35 @@
-body {
+html {
   background-color: black;
-  margin: 0;
-  padding: 0;
-  background-image: url('crt-monitor-background.avif');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('crt-monitor-background.avif');
+  /* background-position: top; */
+  background-repeat: no-repeat;
+  background-size:cover;
+  z-index: -1;
+}
 
 #terminal {
-  width: 13.8%;
-  height: 23%;
   position: fixed;
-  top: 17vw;
-  left: 24.5vw;
   border-radius: 5px;
   background-color: transparent;
   color: #00FF00;
   font-family: monospace;
-  font-size: 0.5vw;
+  overflow-y: scroll;
   z-index: 1;
   text-shadow: 0 0 5px #00ff009d;
-  filter:blur(0.6px);
-  transform: perspective(670px) rotateX(0deg) rotateY(10deg) rotateZ(-1.5deg);
+  filter:blur(0.8px);
+  transform: perspective(1000px) rotateX(-2deg) rotateY(10deg) rotateZ(-1.4deg);
 }
 
 p {
@@ -38,6 +43,7 @@ input {
   border: none;
   outline: none;
   color: #00FF00;
+  font-size: 0.5vw;
   font-family: monospace;
   caret-color: #00FF00;
   filter:blur(0.6px);
