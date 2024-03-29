@@ -5,14 +5,73 @@
   <title>Jamaro Mooibroek - Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/x-icon;base64,AA">
+  <meta charset="ascii">
 </head>
 
 <body>
-  <div id="terminal"><div id="terminal-entries"></div>
-    <div id="input-container">visitor@jamaronet:~$<input id="input" type="text" autofocus autocomplete="off" /></div>
+  <div id="pc">
+    <div id="terminal">
+      <div id="terminal-entries"></div>
+      <div id="input-container">visitor@jamaronet:~$<input id="tinput" type="text" autofocus autocomplete="off" /></div>
+    </div>
+    <div id="monitor">
+      <div id="web">
+        <div id="welcome">
+          <h3>Welcome to my Web Portfolio!</h3>
+          <p>Use the terminal left of me to navigate between pages. Type 'help' for a list of commands. You'll figure it out ☺</p>
+        </div>
+        <div id="me">
+          <img src="me.avif" alt="">
+          <h3>About Me</h3>
+          <p>My name is Jamaro Mooibroek. I am <span id="age"></span> years old. I've got a lot of hobby's, including but not limited to: repearing electronics, programming, making music, and reading books.</p>
+        </div>
+        <div id="music">
+          <img src="inst.avif" alt="">
+          <h3>My Music</h3>
+          <p>Since I turned 18, I have been playing my mom's guitar. Later on, I bought an electric guitar for myself.
+            Occasionally, I record music and share it on my SoundCloud page, which you can find at this link: <a
+              href="https://soundcloud.com/jampottie" target="_blank">soundcloud.com/jampottie</a></p>
+        </div>
+        <div id="contact">
+          <h3>Contact</h3>
+          <p>E-Mail: <a href="mailto:jamaro@duck.com">jamaro@duck.com</a></p>
+        </div>
+      </div>
+    </div>
   </div>
-  
-  <script src="main.js"></script>
+  <div id="mobile">
+    <div id="gb">
+      <div id="gbscreen">
+        <div id="page0">
+          Welcome to my Web Portfolio! <br><br>
+          Use the D-pad and A-button to navigate between pages.
+        </div>
+        <div id="page1">
+          About me
+        </div>
+        <div id="page2">
+          About my music
+        </div>
+        <div id="page3">
+          Contact
+        </div>
+        <div id="page4">
+          <br><br><br><br>
+          <<<<<<|<<<<<<
+        </div>
+      </div>
+      <div id="options"></div>
+      <button id="up"></button>
+      <button id="down"></button>
+      <button id="left"></button>
+      <button id="right"></button>
+      <button id="a"></button>
+      <button id="b"></button>
+
+    </div>
+    <script src="gb.js"></script>
+    <script src="main.js"></script>
+    
 </body>
 
 </html>
