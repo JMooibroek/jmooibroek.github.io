@@ -6,6 +6,8 @@ const gb = document.getElementById('gb');
 const input = document.getElementById('tinput');
 const pc = document.getElementById('pc');
 const mobile = document.getElementById('mobile');
+// var bgbg=new Image().src = "bg.avif";
+// var gbbg=new Image().src = "gb.avif";
 
 const birthDate = new Date("2002-09-22"), today = new Date(), age = today.getFullYear() - birthDate.getFullYear(), monthDiff = today.getMonth() - birthDate.getMonth(), dayDiff = today.getDate() - birthDate.getDate();
 document.getElementById("age").textContent = (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) ? age - 1 : age;
@@ -30,13 +32,13 @@ function resizeScreen() {
   if(window.innerWidth > window.innerHeight) {
     pc.style.display = 'block';
     mobile.style.display = 'none';
-    document.body.style.backgroundImage = "url('bg.avif')";
+    // document.body.style.backgroundImage = 'url(' + bgbg + ')';
     resizeTerminal(terminal, terminalArray, 1.77);
     resizeTerminal(monitor, monitorArray, 1.77);
   } else {
     pc.style.display = 'none';
     mobile.style.display = 'block';
-    document.body.style.backgroundImage = "url('gb.avif')";
+    // document.body.style.backgroundImage = 'url(' + gbbg + ')';
     resizeTerminal(gb, screenArray, 0.646);
   }
 }

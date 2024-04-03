@@ -18,6 +18,30 @@ body {
   background-size: contain;
 }
 
+#pc {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('bg.avif');
+}
+
+#mobile {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('gb.avif');
+}
+
 #terminal {
   position: fixed;
   border-radius: 5px;
@@ -114,7 +138,7 @@ body {
   top: 50%;
   left: 50%;
   font-family: gameboy;
-  text-shadow: 2px 2px #0000004d;
+  text-shadow: 1px 1px #0000004d;
 }
 
 #gbscreen {
@@ -125,6 +149,10 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
+}
+
+#gbscreen a {
+  color: #3D593B;
 }
 
 #options {
@@ -175,4 +203,11 @@ button {
 #b {
   top: 74%;
   left: 70%;
+}
+
+#tx {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  background-color: white;
 }
