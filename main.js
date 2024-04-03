@@ -6,8 +6,6 @@ const gb = document.getElementById('gb');
 const input = document.getElementById('tinput');
 const pc = document.getElementById('pc');
 const mobile = document.getElementById('mobile');
-// var bgbg=new Image().src = "bg.avif";
-// var gbbg=new Image().src = "gb.avif";
 
 const birthDate = new Date("2002-09-22"), today = new Date(), age = today.getFullYear() - birthDate.getFullYear(), monthDiff = today.getMonth() - birthDate.getMonth(), dayDiff = today.getDate() - birthDate.getDate();
 document.getElementById("age").textContent = (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) ? age - 1 : age;
