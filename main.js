@@ -7,8 +7,9 @@ const input = document.getElementById('tinput');
 const pc = document.getElementById('pc');
 const mobile = document.getElementById('mobile');
 
-const birthDate = new Date("2002-09-22"), today = new Date(), age = today.getFullYear() - birthDate.getFullYear(), monthDiff = today.getMonth() - birthDate.getMonth(), dayDiff = today.getDate() - birthDate.getDate();
-document.getElementById("age").textContent = (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) ? age - 1 : age;
+const birthDate = new Date("2002-09-22");
+const age = Math.floor((new Date() - birthDate) / 365 / 24 / 60 / 60 / 1000);
+document.getElementById("age").textContent = age;
 
 terminalArray = [['translate(-27.9vw, -11.5vw) perspective(56.5vw) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg)','25vw','15.5vw','1vw','blur(0.03vw)','0 0 0.4vw #00ff009d', '1vw'],['translate(-49.4vh, -20.4vh) perspective(100vh) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg)','44.4vh','27.5vh','1.8vh','blur(0.06vh)','0 0 0.8vh #00ff009d', '1.8vh']];
 monitorArray = [['translate(19.9vw, -12.8vw) perspective(56.5vw) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg)','21.6vw','14.3vw','1.1vw'],['translate(35.3vh, -22.7vh) perspective(100vh) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg)','38.2vh','25.3vh','2vh']];
@@ -65,7 +66,7 @@ function showPage(id) {
 
 input.addEventListener('keydown', function (event) {
   if (event.key === 'Enter') {
-    const command = input.value;
+    const command = input.value.toLowerCase().replace(/\s/g, '');
     input.value = '';
     addLine('visitor@jamaronet:~$' + command);
     switch (command) {
