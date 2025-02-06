@@ -1,0 +1,21 @@
+<h1>My Homelab</h1>
+I bought a Lenovo Thinkstation P520 from an action house. It has an Intel Xeon(R) W-2135, 64GB of RAM, a 512GB NVMe drive and a Nvidia Quadrio P1000.<br>
+<h2>Proxmox</h2>
+The first thing I did was installing and booting Proxmox VE (<a href="https://www.proxmox.com">proxmox.com</a>), which is a Virtual Environment manager. It comes with an administration interface to control containers and virtual environments. It is free for consumers and comes with a lot of features, like virtual infrastructure and user authentication.
+<h2>Environments</h2>
+I'm currently running five environments.
+<h3>Homepage</h3>
+Homepage (<a href="https://gethomepage.dev/">gethomepage.dev</a>) is a control dashboard to overview all running environments. It is easily configurable by editing YAML files.<br>
+You can add API keys from other environments to get real-time data.
+<h3>Pi-hole</h3>
+Pi-hole (<a href="https://pi-hole.net/">pi-hole.net</a>) is a DNS sinkhole. It can filter ip requests to advertisement websites, which prevents ads from popping up. Every device connected to the network will get an ad-free experience.<br>
+This means even our smart TV won't get ads.
+<h3>Home Assistant</h3>
+Home Assistant (<a href="https://www.home-assistant.io/">home-assistant.io/</a>) is a home automation control dashboard with multiple IoT protocol possibilities.<br>
+<h3>WireGuard</h3>
+WireGuard (<a href="https://www.wireguard.com/">wireguard.com</a>) is a VPN server. This way I can access devices on the local network even when I'm not home.
+<h3>PrivateBin + YOURLS</h3>
+PrivateBin (<a href="https://privatebin.info/">privatebin.info/</a>) is a pastebin. You can copy text or files and paste it in PrivateBin, and then get a link to give to others or other devices. Ever wanted to copy text on your phone and paste it on your computer? PrivateBin is the answer.<br>
+I combined it with YOURLS (<a href="https://yourls.org/">yourls.org</a>) to shorten the given links.
+<h2>Future Plans</h2>
+I'm still planning on setting up a NAS like TrueNAS.

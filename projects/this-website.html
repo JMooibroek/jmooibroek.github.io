@@ -1,0 +1,28 @@
+<h1>The Making of My Web Portfolio</h1>
+I always wanted to create a web portfolio. When I stumbled upon a rank list (<a href="https://512kb.club/" rel="noopener">512kb.club</a>) awarding lightweight websites, I had the inspiration to make one.
+<h2>Compression</h2>
+Compression is a choice between file size and importance. I like compression because it requires an extra thought whether to include something or not. And more often than not, inspires it to think outside the box. Creativity favours limitations.<br>
+Looking through the rank list, the lightest websites consist almost purely out of text. Which is a bit boring, but reduces file size significantly. To make things more complicated, I chose to include text, images, code, stylization, fonts, sounds, and a separate responsive version for mobile.<br>
+Thanks to modern technology, I was able to bring the total size of the homepage down to 85.39KB. A simple (Full HD) .png screenshot of this website is 40x bigger than the website itself. You would need to crop it to 200x200 for it to be approximately the same size. 
+<h3>Images</h3>
+To compress images, I used Squoosh (<a href="https://squoosh.app/" rel="noopener">squoosh.app</a>) to convert images to the Avif file format. Squoosh gives additional settings to tweak the images.<br>
+The small icons are converted to webp, as it works better on small images. Avif works better on large images.
+<h3>Code</h3>
+If you inspect the source code of my website, you might cringe. It is not easily readable, as it is optimized for file size. I used Codebeautify (<a href="https://codebeautify.org/" rel="noopener">codebeautify.org</a>) to shrink the JavaScript files even further. This removes unnecessary whitespace and replaces variable names with single characters.<br>
+This website doesn't use jQuery or other libraries because it increases the file size too much.
+<h3>Style</h3>
+The CSS is not standard. Most classes are stacked on top of each other to decrease repetition. Although it is a viable way of creating CSS, it is not a best practice.
+<h3>Fonts</h3>
+I used default fonts keep the website small and 'web-safe'. The homepage uses Monospace and Times New Roman, which are available by default on (almost) every device. However, the mobile version of the homepage uses a non-standard font: gameboy.woff2<br>
+Woff2 is used to minimize the font size. The original file was a .ttf file with a size of 10.3KB. But by using woff2 (<a href="https://www.youcompress.com/ttf/" rel="noopener">youcompress.com</a>), the size was decreased to 2.78KB.
+<h3>Sound</h3>
+There is only one sound playable on the homepage. It is really short, and only 1.61KB. It is a heavily compressed mp3 file. I tried other formats, but the quality would be too bad. mp3 still reigns as a good compression to quality ratio.<br>
+The music on this project page are also mp3, but not as heavily compressed. Because music is something to enjoy, not to ruin by compression. Higher quality is available on my SoundCloud (link required)
+<h2>The Theme</h2>
+I have always loved tech and the aesthetics of the 80s. It is nostalgia for a time I haven't lived in. Perhaps it is the same love for limitations that make me love how they dealt with limitations with tech in the past.<br>
+That's why I chose for this 80s/90s theme. The background on the homepage (both desktop and mobile version) is a 3d render made in Unreal 5.<br><br>
+<h2>Saving bandwidth</h2>
+The projects on this page are cached when opened, and expire after 24 hours. Unfortunately, there are still websites not optimized for bandwidth. This might increase costs when you are on a cellular network. Caching is a simple and effective way to prevent things from loading twice (or more).
+
+
+<br><br>PS: There is an easter egg on the mobile version of the homepage.

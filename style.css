@@ -1,10 +1,11 @@
 @font-face {
   font-family: gameboy;
-  src: url(gb.woff2);
+  src: url(assets/gb.woff2);
+  font-display: swap;
 }
 
 html {
-  background-color: black;
+  background-color: #111413;
 }
 
 body, #pc, #mobile {
@@ -27,11 +28,11 @@ body, #pc, #mobile {
 }
 
 #pc {
-  background-image: url('bg.avif');
+  background-image: url('assets/bg.avif');
 }
 
 #mobile {
-  background-image: url('gb.avif');
+  background-image: url('assets/gb.avif');
 }
 
 #terminal {
@@ -50,7 +51,7 @@ body, #pc, #mobile {
 
 #tinput {
   background-color: transparent;
-  width: 48%;
+  width: 46%;
   margin-top: 8px;
   border: none;
   outline: none;
@@ -60,7 +61,7 @@ body, #pc, #mobile {
 }
 
 #monitor {
-  background-image: url('ie.avif');
+  background-image: url('assets/ie.avif');
   background-repeat: no-repeat;
   background-size: cover;
   position: fixed;
@@ -103,7 +104,7 @@ body, #pc, #mobile {
 
 #gb {
   position: fixed;
-  color: #22432D;
+  color: #112217;
   font-family: gameboy;
   text-shadow: 1px 1px #0000004d;
 }
@@ -113,13 +114,14 @@ body, #pc, #mobile {
   left: 19%;
   width: 62%;
   height: 30%;
+  
   overflow-y: scroll;
   overflow-x: hidden;
   scrollbar-width: none;
 }
 
 #gbscreen a {
-  color: #3D593B;
+  color: #293b27;
 }
 
 #options {
@@ -129,7 +131,7 @@ body, #pc, #mobile {
   width: 61%;
   height: 7%;
   padding: 1%;
-  border-top: #22432D 3px solid;
+  border-top: #112217 3px solid;
   white-space: pre-wrap;
 }
 
