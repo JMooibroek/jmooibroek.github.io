@@ -92,7 +92,6 @@ input.addEventListener('keydown', function (event) {
 		input.value = '';
 		addLine('visitor@jamaronet:~$' + command);
 		
-		
 		switch (command) {
 			case 'cls':
 			case 'clear':
