@@ -44,8 +44,7 @@ body, #pc, #mobile {
   overflow-x: hidden;
 }
 
-#terminal p {
-  white-space: pre-wrap;
+#terminal pre {
   margin: 0;
 }
 
@@ -88,7 +87,11 @@ body, #pc, #mobile {
   }
 }
 
-#web img {
+#kb {
+  width: 30%;
+}
+
+#wimg {
   width: 30%;
   float: right;
   animation: revealImage 2s steps(10, end);

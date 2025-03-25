@@ -5,7 +5,6 @@ body {
     height: 100%;
     background-color: #57A8A8;
     font-family: 'Verdana', 'sans-serif', monospace;
-    
 }
 
 .b1 {
@@ -30,31 +29,38 @@ img {
 
 #explorer {
     position: fixed;
-    left: 5%;
-    top: 5%;
-    width: 50%;
-    min-width: 500px;
-    height: 50%;
-    min-height: 500px;
+    left: 3%;
+    top: 3%;
+    width: 90%;
     background-color: #C0C7C8;
     overflow: hidden;
     z-index: 0;
+    max-width: 800px;
 }
 
 #bar {
-    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: 20px;
     margin: 5px;
     padding: 5px;
     background-color: #0000A8;
     color: white;
+    overflow: hidden;
 }
 
 #bar > img {
-    float: left;
     height: 20px;
     width: 20px;
     margin-right: 5px;
+}
+
+#bar > b {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #btmbar {
@@ -70,17 +76,16 @@ img {
     padding: 3px;
 }
 
+
 .barbtns {
-    color: black;
-    float: right;
+    display: flex;
 }
 
 .barbtn {
-    float: left;
     height: 20px;
     width: 20px;
     margin-left: 5px;
-    padding: 0px;
+    padding: 0;
     background-color: #C0C7C8;
     text-align: center;
     line-height: 15px;
@@ -90,14 +95,13 @@ img {
 }
 
 #files {
-    position: relative;
-    height: calc(100% - 105px);
     margin: 5px;
     display: flex;
     flex-wrap: wrap;
-    padding: 10px;
+    padding: 5px;
     overflow-y: scroll;
     overflow-x: hidden;
+    max-height: 300px;
 }
 
 .file {
@@ -105,9 +109,9 @@ img {
     user-select: none;
     text-align: center;
     width: 15%;
-    min-width: 80px;
-    max-width: 150px;
-    height: min-content;
+    min-height: min-content;
+    max-width: 200px;
+    min-width: 100px;
 }
 
 .file > img {
@@ -125,11 +129,11 @@ img {
 }
 
 .title {
-    font-size: 12pt;
+    font-size: 1rem;
 }
 
 .date {
-    font-size: 8pt;
+    font-size: 0.8em;
 }
 
 #app {
@@ -137,9 +141,7 @@ img {
     left: 10%;
     top: 10%;
     width: 80%;
-    min-width: 500px;
     height: 80%;
-    min-height: 500px;
     background-color: #C0C7C8;
     overflow: hidden;
     z-index: 1;
@@ -163,7 +165,6 @@ img {
     width: 30%;
     min-width: 330px;
     max-width: 600px;
-    height: 135px;
     background-color: #C0C7C8;
     overflow: hidden;
     z-index: 2;

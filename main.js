@@ -45,7 +45,7 @@ function resizeScreen() {
 window.addEventListener('resize', resizeScreen);
 
 function addLine(text) {
-	const line = document.createElement('p');
+	const line = document.createElement('pre');
 	line.textContent = text;
 	terminalEntries.appendChild(line);
 }
@@ -63,11 +63,36 @@ function showPage(id) {
 	});
 }
 
+const commands = ['home', 'about', 'contact', 'music', 'reboot', 'help', 'cls', 'clear'];
+
+function levenshtein(a, b) {
+    const matrix = [];
+    for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+    for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+
+    for (let i = 1; i <= b.length; i++) {
+        for (let j = 1; j <= a.length; j++) {
+            if (b[i - 1] === a[j - 1]) {
+                matrix[i][j] = matrix[i - 1][j - 1];
+            } else {
+                matrix[i][j] = Math.min(
+                    matrix[i - 1][j - 1] + 1,
+                    Math.min(matrix[i][j - 1] + 1,
+                    matrix[i - 1][j] + 1)
+                );
+            }
+        }
+    }
+    return matrix[b.length][a.length];
+}
+
 input.addEventListener('keydown', function (event) {
 	if (event.key === 'Enter') {
 		const command = input.value.toLowerCase().replace(/\s/g, '');
 		input.value = '';
 		addLine('visitor@jamaronet:~$' + command);
+		
+		
 		switch (command) {
 			case 'cls':
 			case 'clear':
@@ -99,10 +124,20 @@ input.addEventListener('keydown', function (event) {
 				addLine('  help         Show available commands');
 				break;
 			default:
-				addLine('Command not found: ' + command);
-				addLine('Type "help" to show the available commands');
+				addLine("'"+command+"' " + 'not recognized');
+				let closest = null, minDist = Infinity;
+				commands.forEach(c => {
+					const dist = levenshtein(command, c);
+					if (dist < minDist) {
+						minDist = dist;
+						closest = c;
+					}
+				});
+				if (minDist < 3) addLine("did you mean '" + closest + "'?");
+				else addLine('Type "help" to show the available commands');
 				break;
 		}
+		
 		event.preventDefault();
 		terminal.scrollTop = terminal.scrollHeight;
 		input.focus();
