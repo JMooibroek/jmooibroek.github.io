@@ -12,18 +12,18 @@ const age = Math.floor((new Date() - birthDate) / 365 / 24 / 60 / 60 / 1000);
 document.getElementById("age").textContent = age;
 
 const monitorStyles = [
-	['translate(19.9vw, -12.8vw) perspective(56.5vw) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg)', '21.6vw', '14.3vw', '1.1vw'],
-	['translate(35.3vh, -22.7vh) perspective(100vh) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg)', '38.2vh', '25.3vh', '2vh']
+	['translate(19.9svw, -12.8svw) perspective(56.5svw) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg)', '21.6svw', '14.3svw', '1.1svw'],
+	['translate(35.3svh, -22.7svh) perspective(100svh) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg)', '38.2svh', '25.3svh', '2svh']
 ];
 
 const terminalStyles = [
-	['translate(-27.9vw, -11.5vw) perspective(56.5vw) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg)', '25vw', '15.5vw', '1vw', 'blur(0.03vw)', '0 0 0.4vw #00ff009d', '11vw'],
-	['translate(-49.4vh, -20.4vh) perspective(100vh) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg)', '44.4vh', '27.5vh', '1.8vh', 'blur(0.06vh)', '0 0 0.8vh #00ff009d', '21vh']
+	['translate(-27.9svw, -11.5svw) perspective(56.5svw) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg)', '25svw', '15.5svw', '1svw', 'blur(0.03svw)', '0 0 0.4svw #00ff009d', '11svw'],
+	['translate(-49.4svh, -20.4svh) perspective(100svh) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg)', '44.4svh', '27.5svh', '1.8svh', 'blur(0.06svh)', '0 0 0.8svh #00ff009d', '21svh']
 ];
 
 const screenStyles = [
-	['translate(-40vw, -54.8vw) skewY(-0.5deg)', '77vw', '110vw', '2.3vw'],
-	['translate(-25.8vh, -35.4vh) skewY(-0.5deg)', '49.7vh', '71vh', '1.5vh']
+	['translate(-40svw, -54.8svw) skewY(-0.5deg)', '77svw', '110svw', '2.3svw'],
+	['translate(-25.8svh, -35.4svh) skewY(-0.5deg)', '49.7svh', '71svh', '1.5svh']
 ];
 
 function resizeTerminal(element, styles, aspectRatio) {
