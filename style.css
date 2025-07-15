@@ -25,6 +25,7 @@ body, #pc, #mobile {
 #terminal, #monitor, #gb {
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #pc {
@@ -33,6 +34,95 @@ body, #pc, #mobile {
 
 #mobile {
   background-image: url('assets/gb.avif');
+}
+
+h1 {
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+} 
+
+.footer {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+@media screen and (orientation:portrait) {
+  @media (min-aspect-ratio: 249/385) {
+    #gb {
+      transform: translate(-25.8svh, -35.4svh) skewY(-0.5deg);
+      width: 49.7svh;
+      height: 71svh;
+      font-size: 1.5svh;
+    }
+    
+  }
+  @media (max-aspect-ratio: 249/385) {
+    #gb {
+      transform: translate(-40svw, -54.8svw) skewY(-0.5deg);
+      width: 77svw;
+      height: 110svw;
+      font-size: 2.3svw;
+    }
+  }
+  #pc {
+    display: none;
+  }
+  #mobile {
+    display: block;
+  }
+}
+
+
+@media screen and (orientation:landscape) {
+  @media (min-aspect-ratio: 48/27) {
+    #monitor { /*Screen style 1*/
+      transform: translate(35.3svh, -22.7svh) perspective(100svh) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg);
+      width: 38.2svh;
+      height: 25.3svh;
+      font-size: 2svh;
+    }
+    #terminal {
+      transform: translate(-49.4svh, -20.4svh) perspective(100svh) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg);
+      width: 44.4svh;
+      height: 27.5svh;
+      font-size: 1.8svh;
+      filter: blur(0.06svh);
+      text-shadow: 0 0 0.8svh #00ff009d;
+    }
+    #tinput {
+      font-size: 1.8svh;
+      text-shadow: 0 0 0.8svh #00ff009d;
+      width: 21svh;
+    }
+  }
+  @media (max-aspect-ratio: 48/27) {
+    #monitor { /*Screen style 0*/
+      transform: translate(19.9svw, -12.8svw) perspective(56.5svw) rotateX(8deg) rotateY(-28deg) rotateZ(5.4deg);
+      width: 21.6svw;
+      height: 14.3svw;
+      font-size: 1.1svw;
+    }
+    #terminal {
+      transform: translate(-27.9svw, -11.5svw) perspective(56.5svw) rotateX(0deg) rotateY(15deg) rotateZ(-1.4deg);
+      width: 25svw;
+      height: 15.5svw;
+      font-size: 1svw;
+      filter: blur(0.03svw);
+      text-shadow: 0 0 0.4svw #00ff009d;
+    }
+    #tinput {
+      font-size: 1svw;
+      text-shadow: 0 0 0.4svw #00ff009d;
+      width: 11svw;
+    }
+  }
+  #pc {
+    display: block;
+  }
+  #mobile {
+    display: none;
+  }
 }
 
 #terminal {
@@ -44,7 +134,7 @@ body, #pc, #mobile {
   overflow-x: hidden;
 }
 
-#terminal pre {
+#terminal pre, #web h3, #web p {
   margin: 0;
 }
 
@@ -97,11 +187,7 @@ body, #pc, #mobile {
   animation: revealImage 2s steps(10, end);
 }
 
-#web h3, #web p {
-  margin: 0;
-}
-
-#me, #music, #contact, #mobile {
+#me, #music, #contact {
   display:none;
 }
 
