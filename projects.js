@@ -133,6 +133,7 @@ function openProject(projectName) {
                 playerTime();
             }, { once: true });
         } else {
+            appContent.scrollTo(0,0);
             appText.innerHTML = data;
             if (project.icon === 'wp') {
                 npIcon.style.display = 'block';
